@@ -13,9 +13,8 @@ public class JsonGame {
     public static List<Game> getData(String content) throws JSONException {
 
 
-
-
-        JSONArray jsonArray = new JSONArray(content);
+        JSONObject jsonData = new JSONObject(content);
+        JSONArray jsonArray = jsonData.getJSONArray(name:"amiibo");
         List<Game> GameList = new ArrayList<>();
 
         for (int i = 0; i < jsonArray.length(); i++) {
